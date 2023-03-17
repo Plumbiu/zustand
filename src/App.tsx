@@ -1,7 +1,7 @@
 import Person from "./components/Person"
-import { usePersonStore } from './store/person'
+import { usePersonIncrease } from './store/person'
 const App = () => {
-  const { increase } = usePersonStore()
+  const increase = usePersonIncrease()
   return (
     <div>
       <Person />

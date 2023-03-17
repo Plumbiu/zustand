@@ -1,7 +1,8 @@
-import { usePersonStore } from '../store/person'
+import { usePersonAge, usePersonName } from '../store/person'
 
 const Person = () => {
-  const { age, name } = usePersonStore() as { age: number; name: string }
+  const age = usePersonAge()
+  const name = usePersonName()
   return (
     <div>
       <div> age: {age}</div>
