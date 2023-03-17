@@ -1,6 +1,12 @@
 import { create } from 'zustand'
 
-export const usePersonStore = create((set) => ({
+interface IPerson {
+  name: string
+  age: number
+  increase: () => void
+}
+
+export const usePersonStore = create<IPerson>()((set) => ({
   name: 'xj',
   age: 18,
   increase: () => {    
